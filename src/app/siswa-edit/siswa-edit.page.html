@@ -1,0 +1,85 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Edit Data Siswa</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]='true'>
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Edit Data Siswa</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-list lines="full">
+    <ion-item>
+      <ion-label position="floating">NIS</ion-label>
+      <ion-input
+        required
+        readonly
+        type="text"
+        [(ngModel)]="nis"
+        placeholder="NIS SISWA"
+      ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Nama</ion-label>
+      <ion-input
+        required
+        type="text"
+        [(ngModel)]="nama"
+        placeholder="NAMA SISWA"
+      ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Alamat siswa</ion-label>
+      <ion-input
+        required
+        type="text"
+        [(ngModel)]="alamat_siswa"
+        placeholder="ALAMAT SISWA"
+      ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Pendidikan Terakhir</ion-label>
+      <ion-input
+        required
+        type="text"
+        [(ngModel)]="pendidikan_terakhir"
+        placeholder="PENDIDIKAN TERAKHIR"
+      ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">No. Telepon</ion-label>
+      <ion-input
+        required
+        type="text"
+        [(ngModel)]="no_telp"
+        placeholder="NO. TELEPON"
+      ></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-row>
+    <ion-col>
+      <ion-button
+        type="button"
+        (click)="editSiswa()"
+        color="success"
+        shape="full"
+        expand="block"
+        >Edit Data Siswa</ion-button
+      >
+    </ion-col>
+    <!-- <ion-col>
+      <ion-button
+        type="button"
+        (click)="batal()"
+        color="danger"
+        expand="block"
+        >Batal</ion-button
+      >
+    </ion-col> -->
+  </ion-row>
+</ion-content>
