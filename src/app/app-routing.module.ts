@@ -3,13 +3,13 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '',
-    loadChildren:() => import('./login/login.module').then( m => m.LoginPageModule),
-    pathMatch: 'full'
+    path: 'auth',
+    loadChildren: () => import('./auth/auth.module').then( m => m.AuthPageModule)
   },
   {
-    path: 'folder/:id',
-    loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
+    path: 'login',
+    loadChildren:() => import('./login/login.module').then( m => m.LoginPageModule),
+    pathMatch: 'full'
   },
   {
     path: 'siswa',
@@ -24,13 +24,13 @@ const routes: Routes = [
     loadChildren: () => import('./siswa-edit/siswa-edit.module').then( m => m.SiswaEditPageModule)
   },
   {
-    path: 'login',
-    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
-  },
-  {
     path: 'register',
     loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
-  }
+  },
+  {
+    path: 'login-admin',
+    loadChildren: () => import('./login-admin/login-admin.module').then( m => m.LoginAdminPageModule)
+  },
 ];
 
 @NgModule({

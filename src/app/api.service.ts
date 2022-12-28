@@ -19,7 +19,6 @@ export class ApiService {
   apiURL (){
     return 'http://localhost/api';
   }
-
   //  get data
   getSiswa(){
     return this.http.get(this.apiURL() + '/tampil.php');
@@ -39,6 +38,11 @@ export class ApiService {
 
   login(credentials: User): Observable<string> {
     return this.http.post<{token: string}>(this.apiURL() + '/login', credentials).pipe(
+      map(response => response.token)
+    )
+  }
+  loginAdmin(credentials: User): Observable<string> {
+    return this.http.post<{token: string}>(this.apiURL() + '/loginAdmin', credentials).pipe(
       map(response => response.token)
     )
   }

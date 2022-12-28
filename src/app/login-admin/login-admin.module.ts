@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { LoginPageRoutingModule } from './login-routing.module';
+import { LoginAdminPageRoutingModule } from './login-admin-routing.module';
 
-import { LoginPage } from './login.page';
-import { ScrollingModule } from '@angular/cdk/scrolling';
+import { LoginAdminPage } from './login-admin.page';
 
 @NgModule({
   imports: [
@@ -15,9 +15,8 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     FormsModule,
     IonicModule,
     ReactiveFormsModule,
-    ScrollingModule,
-    LoginPageRoutingModule
+    LoginAdminPageRoutingModule
   ],
-  declarations: [LoginPage]
+  declarations: [LoginAdminPage]
 })
-export class LoginPageModule {}
+export class LoginAdminPageModule {}

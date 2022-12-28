@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import {
   AlertController,
@@ -8,20 +8,20 @@ import {
 import { ApiService } from '../api.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
-
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.page.html',
-  styleUrls: ['./login.page.scss'],
+  selector: 'app-login-admin',
+  templateUrl: './login-admin.page.html',
+  styleUrls: ['./login-admin.page.scss'],
 })
-export class LoginPage {
+export class LoginAdminPage {
+
   constructor(
     private router: Router,
     public _apiService: ApiService,
     public alertController: AlertController,
     public loadingController: LoadingController,
     public toastController: ToastController
-  ) {}
+  ) { }
 
   form = new FormGroup({
     username: new FormControl('', [
@@ -40,7 +40,7 @@ export class LoginPage {
     });
     await loading.present();
 
-    this._apiService.login(this.form.value).subscribe(
+    this._apiService.loginAdmin(this.form.value).subscribe(
       // If success
       async (token) => {
         localStorage.setItem('token', token);
@@ -58,4 +58,5 @@ export class LoginPage {
       }
     );
   }
+
 }
