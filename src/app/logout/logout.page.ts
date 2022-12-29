@@ -13,16 +13,14 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './logout.page.html',
   styleUrls: ['./logout.page.scss'],
 })
-export class LogoutPage  {
-
+export class LogoutPage {
   constructor(
     private router: Router,
     public _apiService: ApiService,
     public alertController: AlertController,
     public loadingController: LoadingController,
     public toastController: ToastController
-  ) { }
-
+  ) {}
 
   async onLogout() {
     const loading = await this.loadingController.create({

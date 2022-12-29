@@ -5,40 +5,68 @@
       <p>Daftar Akun untuk melanjutkan</p>
     </div>
     <form [formGroup]="form" (submit)="onSubmit()">
-      <div class="login-form ion-padding" >
+      <div class="login-form ion-padding">
         <div class="form-input">
           <ion-icon name="person-outline"></ion-icon>
           <ion-item>
             <ion-label position="floating">FIRSTNAME</ion-label>
-            <ion-input required type="text" formControlName="firstname"></ion-input>
+            <ion-input
+              required
+              type="text"
+              formControlName="firstname"
+            ></ion-input>
           </ion-item>
         </div>
         <div class="form-input">
           <ion-icon name="person-outline"></ion-icon>
           <ion-item>
             <ion-label position="floating">LASTNAME</ion-label>
-            <ion-input required type="text" formControlName="lastname"></ion-input>
+            <ion-input
+              required
+              type="text"
+              formControlName="lastname"
+            ></ion-input>
           </ion-item>
         </div>
         <div class="form-input">
           <ion-icon name="person-circle-outline"></ion-icon>
           <ion-item>
             <ion-label position="floating">USERNAME</ion-label>
-            <ion-input required type="text" formControlName="username"></ion-input>
+            <ion-input
+              required
+              type="text"
+              formControlName="username"
+            ></ion-input>
           </ion-item>
         </div>
         <div class="form-input">
           <ion-icon name="lock-closed-outline"></ion-icon>
           <ion-item>
             <ion-label position="floating">PASSWORD</ion-label>
-            <ion-input required type="password" formControlName="password"></ion-input>
+            <ion-input
+              required
+              type="password"
+              formControlName="password"
+            ></ion-input>
           </ion-item>
         </div>
       </div>
       <div class="action-button ion-padding">
-        <ion-button type="submit" [disabled]="form.invalid" class="login-button" size="large">Register</ion-button>
+        <ion-button
+          type="submit"
+          [disabled]="form.invalid"
+          class="login-button"
+          size="large"
+          >Register</ion-button
+        >
         <p>Sudah punya akun?</p>
-        <ion-button class="register-button" fill="outline" routerLink="/login" size="large">Login</ion-button>
+        <ion-button
+          class="register-button"
+          fill="outline"
+          routerLink="/login"
+          size="large"
+          >Login</ion-button
+        >
       </div>
     </form>
   </div>

@@ -1,32 +1,42 @@
-<ion-content >
+<ion-content>
   <!-- <cdk-virtual-scroll-viewport itemSize="56" minBufferPx="900" maxBufferPx="1350" > -->
-    <!-- Your existing content and configurations -->
-    <div class="login-section ion-padding">
-      <div class="heading ion-padding">
-        <h1>Selamat Datang Di Aplikasi Pendaftaran Siswa</h1>
-        <p>Login to continue</p>
-      </div>
-      <form [formGroup]="form" (submit)="onSubmit()" >
-        <div class="login-form ion-padding">
-          <div class="form-input">
-            <ion-icon name="person-circle-outline"></ion-icon>
-            <ion-item>
-              <ion-label position="floating">USERNAME</ion-label>
-              <ion-input required type="text" formControlName="username"></ion-input>
-            </ion-item>
-          </div>
-          <div class="form-input">
-            <ion-icon name="lock-closed-outline"></ion-icon>
-            <ion-item>
-              <ion-label position="floating">PASSWORD</ion-label>
-              <ion-input required type="password" formControlName="password"></ion-input>
-            </ion-item>
-          </div>
-        </div>
-        <div class="action-button ion-padding">
-          <ion-button type="submit" class="login-button" size="large">Log In</ion-button>
-        </div>
-      </form>
+  <!-- Your existing content and configurations -->
+  <div class="login-section ion-padding">
+    <div class="heading ion-padding">
+      <h1>Selamat Datang Di Aplikasi Pendaftaran Siswa</h1>
+      <p>Login to continue</p>
     </div>
+    <form [formGroup]="form" (submit)="onSubmit()">
+      <div class="login-form ion-padding">
+        <div class="form-input">
+          <ion-icon name="person-circle-outline"></ion-icon>
+          <ion-item>
+            <ion-label position="floating">USERNAME</ion-label>
+            <ion-input
+              required
+              type="text"
+              formControlName="username"
+            ></ion-input>
+          </ion-item>
+        </div>
+        <div class="form-input">
+          <ion-icon name="lock-closed-outline"></ion-icon>
+          <ion-item>
+            <ion-label position="floating">PASSWORD</ion-label>
+            <ion-input
+              required
+              type="password"
+              formControlName="password"
+            ></ion-input>
+          </ion-item>
+        </div>
+      </div>
+      <div class="action-button ion-padding">
+        <ion-button type="submit" class="login-button" size="large"
+          >Log In</ion-button
+        >
+      </div>
+    </form>
+  </div>
   <!-- </cdk-virtual-scroll-viewport> -->
- </ion-content>
+</ion-content>

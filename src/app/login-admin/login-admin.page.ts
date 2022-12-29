@@ -14,14 +14,13 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./login-admin.page.scss'],
 })
 export class LoginAdminPage {
-
   constructor(
     private router: Router,
     public _apiService: ApiService,
     public alertController: AlertController,
     public loadingController: LoadingController,
     public toastController: ToastController
-  ) { }
+  ) {}
 
   form = new FormGroup({
     username: new FormControl('', [
@@ -58,5 +57,4 @@ export class LoginAdminPage {
       }
     );
   }
-
 }
