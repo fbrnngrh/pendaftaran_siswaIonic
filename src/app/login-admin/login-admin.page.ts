@@ -45,7 +45,7 @@ export class LoginAdminPage {
       async (token) => {
         localStorage.setItem('token', token);
         loading.dismiss();
-        this.router.navigateByUrl('/siswa-baru');
+        this.router.navigateByUrl('/siswa');
       },
       async () => {
         const alert = await this.alertController.create({

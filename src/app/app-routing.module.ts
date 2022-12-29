@@ -42,7 +42,11 @@ const routes: Routes = [
   {
     path: 'logout',
     loadChildren: () => import('./logout/logout.module').then( m => m.LogoutPageModule)
+  },  {
+    path: 'tambah-siswa',
+    loadChildren: () => import('./tambah-siswa/tambah-siswa.module').then( m => m.TambahSiswaPageModule)
   },
+
 
 ];
 
