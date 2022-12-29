@@ -17,6 +17,9 @@ export class SiswaTambahPage implements OnInit {
   alamat_siswa: any;
   no_telp: any;
   pendidikan_terakhir: any;
+  tgl_lahir: any;
+  nama_bapak: any;
+  nama_ibu: any;
 
   constructor(
     private route : ActivatedRoute,
@@ -43,7 +46,10 @@ export class SiswaTambahPage implements OnInit {
         nama: this.nama,
         alamat_siswa: this.alamat_siswa,
         no_telp: this.no_telp,
-        pendidikan_terakhir: this.pendidikan_terakhir
+        pendidikan_terakhir: this.pendidikan_terakhir,
+        tgl_lahir: this.tgl_lahir,
+        nama_bapak: this.nama_bapak,
+        nama_ibu: this.nama_ibu
       },
     }).then((data)=> {
       this.nis = '';
@@ -51,6 +57,9 @@ export class SiswaTambahPage implements OnInit {
       this.alamat_siswa = '';
       this.no_telp = '';
       this.pendidikan_terakhir = '';
+      this.tgl_lahir = '';
+      this.nama_bapak = '';
+      this.nama_ibu = '';
       this.alertController.create({
         header: 'Nontifikasi',
         message: 'Data berhasil ditambahkan',

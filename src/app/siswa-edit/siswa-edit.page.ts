@@ -15,6 +15,9 @@ export class SiswaEditPage implements OnInit {
   alamat_siswa: any;
   no_telp: any;
   pendidikan_terakhir: any;
+  tgl_lahir: any;
+  nama_bapak: any;
+  nama_ibu: any;
   constructor(
     private route : ActivatedRoute,
     private router : Router,
@@ -40,6 +43,9 @@ export class SiswaEditPage implements OnInit {
       this.alamat_siswa = siswa.alamat_siswa;
       this.no_telp = siswa.no_telp;
       this.pendidikan_terakhir = siswa.pendidikan_terakhir;
+      this.tgl_lahir = siswa.tgl_lahir;
+      this.nama_bapak = siswa.nama_bapak;
+      this.nama_ibu = siswa.nama_ibu;
     }, (error: any) => {
       console.log('error', error);
       alert('gagal ambil data')
@@ -59,7 +65,11 @@ export class SiswaEditPage implements OnInit {
         nama: this.nama,
         alamat_siswa: this.alamat_siswa,
         no_telp: this.no_telp,
-        pendidikan_terakhir: this.pendidikan_terakhir
+        pendidikan_terakhir: this.pendidikan_terakhir,
+        tgl_lahir: this.tgl_lahir,
+        nama_bapak: this.nama_bapak,
+        nama_ibu: this.nama_ibu,
+
       },
     }).then((data)=> {
       this.nis = '';
@@ -67,6 +77,9 @@ export class SiswaEditPage implements OnInit {
       this.alamat_siswa = '';
       this.no_telp = '';
       this.pendidikan_terakhir = '';
+      this.tgl_lahir = '';
+      this.nama_bapak = '';
+      this.nama_ibu = '';
       this.alertController.create({
         header: 'Nontifikasi',
         message: 'Data berhasil diubah',

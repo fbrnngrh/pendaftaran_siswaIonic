@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public appPages = [
-    { title: ' Daftar Siswa', url: '/siswa', icon: 'person' },
+    { title: ' Logout ', url: '/logout', icon: 'person' },
   ];
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
   constructor() {}

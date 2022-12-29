@@ -21,7 +21,7 @@
         readonly
         type="text"
         [(ngModel)]="nis"
-        placeholder="NIS SISWA"
+        placeholder="Format NIS = NIS-no pendaftaran -> contoh 123123-2020-0001"
       ></ion-input>
     </ion-item>
     <ion-item>
@@ -59,6 +59,33 @@
         [(ngModel)]="no_telp"
         placeholder="NO. TELEPON"
       ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Tanggal Lahir</ion-label>
+      <ion-input
+        required
+        type="text"
+        [(ngModel)]="tgl_lahir"
+        placeholder="Tanggal Lahir"
+      ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Nama Ayah/Bapak</ion-label>
+      <ion-input
+        required
+        type="text"
+        [(ngModel)]="nama_bapak"
+        placeholder="Nama Ayah/Bapak"
+      ></ion-input>      
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Nama Ibu</ion-label>
+      <ion-input
+        required
+        type="text"
+        [(ngModel)]="nama_ibu"
+        placeholder="Nama ibu"
+      ></ion-input>      
     </ion-item>
   </ion-list>
   <ion-row>
